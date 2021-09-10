@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <title>Any relevant you want to give</title>    
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div>
-        <h1>Simple Interest Calculator</h1>
+<html lang="en">
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="range"  id="rate" min="minval" max="maxval" value="default_val"><span id="rate_val"><span id="rate_val">10.25%</span>  <br/>
-        No. of Years <input type="number"  id="years"><select id="years"><option value="1">1</option></select>  <br/>
-        Interest : <span id="result"></span><br>
+<head>
+	<meta charset="utf-8">
+	<title>Any relevant you want to give</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js">
 
-        <button onclick="compute()">Compute Interest.</button><spani id="result"></span>
-        </div>
-        <footer>
-            &#169; This Calculator belongs to --Galo TL--
-        </footer>
-    </body>
+	</script>
+</head>
+
+<body>
+	<div class="maindiv">
+		<h1>Simple Interest Calculator</h1>
+		Amount <input type="number"  id="principal"><br>
+    Interest Rate <input type="range" id="rate" min="1" max="41" value="0.25" onchange="updateRate()"><span id="rate_val">0.25%</span><br>
+    No. of Years <select id="years">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      </select><br>
+    <button onclick="compute()">Compute Interest.</button><br><br>
+    <span id="result"></span>
+    <footer>
+      &#169; This Calculator belongs to --Galo TL--
+    </footer>
+  </div>
+</body>
 </html>
